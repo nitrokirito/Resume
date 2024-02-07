@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Resume</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding: 50px;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #007bff;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Personal Resume</h1>
+    <form id="resume-form">
+      <div class="form-group">
+        <label for="nameInput">Name:</label>
+        <input type="text" class="form-control" id="nameInput" placeholder="Enter your name...">
+      </div>
+      <div class="form-group">
+        <label for="emailInput">Email:</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="Enter your email...">
+      </div>
+      <div class="form-group">
+        <label for="phoneInput">Phone:</label>
+        <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number...">
+      </div>
+      <div class="form-group">
+        <label for="genderInput">Gender:</label>
+        <select class="form-control" id="genderInput">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="parentsInput">Parents:</label>
+        <input type="text" class="form-control" id="parentsInput" placeholder="Enter your parents' names...">
+      </div>
+      <div class="form-group">
+        <label for="elementaryInput">Elementary School:</label>
+        <input type="text" class="form-control" id="elementaryInput" placeholder="Enter your elementary school...">
+      </div>
+      <div class="form-group">
+        <label for="middleInput">High School:</label>
+        <input type="text" class="form-control" id="middleInput" placeholder="Enter your middle school...">
+      </div>
+      <div class="form-group">
+        <label for="highInput">Senior High School:</label>
+        <input type="text" class="form-control" id="highInput" placeholder="Enter your high school...">
+      </div>
+      <div class="form-group">
+        <label for="collegeInput">College:</label>
+        <input type="text" class="form-control" id="collegeInput" placeholder="Enter your college...">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#resume-form').submit(function(event){
+        event.preventDefault();
+        var name = $('#nameInput').val();
+        var email = $('#emailInput').val();
+        var phone = $('#phoneInput').val();
+        var gender = $('#genderInput').val();
+        var parents = $('#parentsInput').val();
+        var elementary = $('#elementaryInput').val();
+        var middle = $('#middleInput').val();
+        var high = $('#highInput').val();
+        var college = $('#collegeInput').val();
+        
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Phone:", phone);
+        console.log("Gender:", gender);
+        console.log("Parents:", parents);
+        console.log("Elementary School:", elementary);
+        console.log("Middle School:", middle);
+        console.log("High School:", high);
+        console.log("College:", college);
+        
+        $(this)[0].reset();
+      });
+    });
+  </script>
+</body>
+</html>
